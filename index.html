@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="theme-color" content="#2b6cb0" />
+<link rel="manifest" href="manifest.json" />
+<link rel="stylesheet" href="styles.css" />
+<title>PhotoNotes — PWA</title>
+</head>
+<body>
+<header>
+<h1>PhotoNotes</h1>
+<button id="installBtn" hidden>Instalar app</button>
+</header>
+
+
+<main>
+<section class="controls">
+<button id="openCamera">📸 Tirar foto</button>
+<button id="getLocation">📍 Obter localização</button>
+<input id="noteText" placeholder="Digite uma nota..." />
+<button id="saveNote">💾 Salvar nota</button>
+</section>
+
+
+<section class="preview">
+<video id="video" autoplay playsinline hidden></video>
+<canvas id="canvas" hidden></canvas>
+<img id="photo" alt="Sua foto aparecerá aqui" />
+</section>
+
+
+<section>
+<h2>Notas salvas</h2>
+<ul id="notesList"></ul>
+</section>
+</main>
+
+
+<footer>
+<small>PhotoNotes — usa câmera, geolocalização e API pública (Nominatim)</small>
+</footer>
+
+
+<script src="app.js"></script>
+</body>
+</html>
